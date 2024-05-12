@@ -1,0 +1,4 @@
+*.log
+*.old
+libcef.dll
+RetroArch.7z
