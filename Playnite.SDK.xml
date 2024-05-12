@@ -358,7 +358,7 @@
             </summary>
             <param name="game"></param>
             <param name="filterSettings"></param>
-            <param name="nameFilterSearchWithAcronyms"></param>
+            <param name="useFuzzyNameMatch"></param>
             <returns></returns>
         </member>
         <member name="M:Playnite.SDK.IGameDatabase.GetFilteredGames(Playnite.SDK.Models.FilterPresetSettings,System.Boolean)">
@@ -366,7 +366,7 @@
             Returns enumeration of all games matching specified filter settings.
             </summary>
             <param name="filterSettings"></param>
-            <param name="nameFilterSearchWithAcronyms"></param>
+            <param name="useFuzzyNameMatch"></param>
             <returns></returns>
         </member>
         <member name="T:Playnite.SDK.ItemUpdateEvent`1">
@@ -1298,6 +1298,11 @@
             
              </summary>
         </member>
+        <member name="F:Playnite.SDK.Events.ApplicationEvent.OnGameStartupCancelled">
+             <summary>
+            
+             </summary>
+        </member>
         <member name="T:Playnite.SDK.Events.OnGameSelectedEventArgs">
             <summary>
             Represents game selection change event.
@@ -1368,6 +1373,16 @@
         <member name="P:Playnite.SDK.Events.OnGameStartedEventArgs.StartedProcessId">
             <summary>
             Gets started process ID. Might not be valid for all started games depending on how the game was started.
+            </summary>
+        </member>
+        <member name="T:Playnite.SDK.Events.OnGameStartupCancelledEventArgs">
+            <summary>
+            Represents arguments for the event when a game is installed.
+            </summary>
+        </member>
+        <member name="P:Playnite.SDK.Events.OnGameStartupCancelledEventArgs.Game">
+            <summary>
+            Gets or sets game object initiating the event.
             </summary>
         </member>
         <member name="T:Playnite.SDK.Events.OnGameStoppedEventArgs">
@@ -1771,6 +1786,21 @@
             ESRB - Entertainment Software Rating Board
             </summary>
         </member>
+        <member name="T:Playnite.SDK.Models.AppSoftwareType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Playnite.SDK.Models.AppSoftwareType.Standard">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Playnite.SDK.Models.AppSoftwareType.Script">
+             <summary>
+            
+             </summary>
+        </member>
         <member name="T:Playnite.SDK.Models.AppSoftware">
             <summary>
             Represents general application software.
@@ -1800,6 +1830,16 @@
              <summary>
             
              </summary>
+        </member>
+        <member name="P:Playnite.SDK.Models.AppSoftware.AppType">
+            <summary>
+            Gets or sets type.
+            </summary>
+        </member>
+        <member name="P:Playnite.SDK.Models.AppSoftware.Script">
+            <summary>
+            Gets or sets script to execute if type is set to script type.
+            </summary>
         </member>
         <member name="M:Playnite.SDK.Models.AppSoftware.#ctor">
             <summary>
@@ -2069,6 +2109,11 @@
         <member name="P:Playnite.SDK.Models.GameScannerConfig.PlayActionSettings">
             <summary>
             Gets or sets play action settings for imported games.
+            </summary>
+        </member>
+        <member name="P:Playnite.SDK.Models.GameScannerConfig.MergeRelatedFiles">
+            <summary>
+            Gets or sets value indicating whether related files, like individual game discs, should be merged under one game entry.
             </summary>
         </member>
         <member name="M:Playnite.SDK.Models.GameScannerConfig.CopyDiffTo(System.Object)">
@@ -3273,6 +3318,16 @@
             Gets or sets working directory of emulator process.
             </summary>
         </member>
+        <member name="P:Playnite.SDK.Models.CustomEmulatorProfile.TrackingMode">
+            <summary>
+            Gets or sets executable arguments for File type tasks.
+            </summary>
+        </member>
+        <member name="P:Playnite.SDK.Models.CustomEmulatorProfile.TrackingPath">
+            <summary>
+            Gets or sets executable arguments for File type tasks.
+            </summary>
+        </member>
         <member name="M:Playnite.SDK.Models.CustomEmulatorProfile.ToString">
              <summary>
             
@@ -3606,6 +3661,9 @@
         <member name="F:Playnite.SDK.Models.GameField.RecentActivity">
             
         </member>
+        <member name="F:Playnite.SDK.Models.GameField.EnableSystemHdr">
+            
+        </member>
         <member name="T:Playnite.SDK.Models.Game">
             <summary>
             Represents Playnite game object.
@@ -3629,6 +3687,11 @@
         <member name="P:Playnite.SDK.Models.Game.GenreIds">
             <summary>
             Gets or sets list of genres.
+            </summary>
+        </member>
+        <member name="P:Playnite.SDK.Models.Game.EnableSystemHdr">
+            <summary>
+            Gets or sets value indicating if the game is should enable HDR on the primary monitor while playing.
             </summary>
         </member>
         <member name="P:Playnite.SDK.Models.Game.Hidden">
@@ -4222,6 +4285,16 @@
             Gets or sets startup script.
             </summary>
         </member>
+        <member name="P:Playnite.SDK.Models.GameAction.InitialTrackingDelay">
+            <summary>
+            Gets or sets delay in milliseconds before tracking actually starts.
+            </summary>
+        </member>
+        <member name="P:Playnite.SDK.Models.GameAction.TrackingFrequency">
+            <summary>
+            Gets or sets delay in milliseconds before tracking actually starts.
+            </summary>
+        </member>
         <member name="M:Playnite.SDK.Models.GameAction.ToString">
             <inheritdoc/>
         </member>
@@ -4436,6 +4509,16 @@
         <member name="P:Playnite.SDK.Plugins.AutomaticPlayController.WorkingDir">
             <summary>
             Gets or sets working directory for File action type executable.
+            </summary>
+        </member>
+        <member name="P:Playnite.SDK.Plugins.AutomaticPlayController.InitialTrackingDelay">
+            <summary>
+            Gets or sets delay in milliseconds before tracking actually starts.
+            </summary>
+        </member>
+        <member name="P:Playnite.SDK.Plugins.AutomaticPlayController.TrackingFrequency">
+            <summary>
+            Gets or sets tracking requency in milliseconds.
             </summary>
         </member>
         <member name="M:Playnite.SDK.Plugins.AutomaticPlayController.#ctor(Playnite.SDK.Models.Game)">
@@ -5758,6 +5841,11 @@
             Called when game stopped running.
             </summary>
         </member>
+        <member name="M:Playnite.SDK.Plugins.Plugin.OnGameStartupCancelled(Playnite.SDK.Events.OnGameStartupCancelledEventArgs)">
+            <summary>
+            Called when game startup is cancelled.
+            </summary>
+        </member>
         <member name="M:Playnite.SDK.Plugins.Plugin.OnGameInstalled(Playnite.SDK.Events.OnGameInstalledEventArgs)">
             <summary>
             Called when game has been installed.
@@ -6790,6 +6878,21 @@
             
              </summary>
         </member>
+        <member name="T:Playnite.SDK.FullscreenView">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Playnite.SDK.FullscreenView.List">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Playnite.SDK.FullscreenView.Details">
+             <summary>
+            
+             </summary>
+        </member>
         <member name="T:Playnite.SDK.IMainViewAPI">
             <summary>
             Describes object providing API for main UI view.
@@ -6798,6 +6901,11 @@
         <member name="P:Playnite.SDK.IMainViewAPI.ActiveDesktopView">
             <summary>
             Gets currently active Desktop mode view.
+            </summary>
+        </member>
+        <member name="P:Playnite.SDK.IMainViewAPI.ActiveFullscreenView">
+            <summary>
+            Gets currently active Fullscreen mode view.
             </summary>
         </member>
         <member name="P:Playnite.SDK.IMainViewAPI.SortOrder">
@@ -7359,6 +7467,12 @@
             Deletes all cookies from specified domain.
             </summary>
             <param name="domain">Cookie domain.</param>
+        </member>
+        <member name="M:Playnite.SDK.IWebView.DeleteDomainCookiesRegex(System.String)">
+            <summary>
+            Deletes all cookies from domains matching specified regular expression.
+            </summary>
+            <param name="domainRegex"></param>
         </member>
         <member name="M:Playnite.SDK.IWebView.DeleteCookies(System.String,System.String)">
             <summary>

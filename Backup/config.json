@@ -6,6 +6,7 @@
     "InstallSize": true,
     "InstallDirectory": true,
     "LastPlayed": false,
+    "Added": false,
     "RecentActivity": true,
     "CompletionStatus": false,
     "Icon": false,
@@ -81,7 +82,7 @@
   },
   "ViewSettings": {
     "GroupingOrder": 0,
-    "GamesViewType": 0,
+    "GamesViewType": 2,
     "SelectedExplorerField": 2,
     "ListViewColumns": {
       "Icon": {
@@ -228,6 +229,11 @@
         "Field": 56,
         "Visible": false,
         "Width": "NaN"
+      },
+      "Roms": {
+        "Field": 78,
+        "Visible": false,
+        "Width": "NaN"
       }
     },
     "ListViewColumsOrder": [
@@ -243,7 +249,7 @@
     "SortingOrder": 0,
     "SortingOrderDirection": 0
   },
-  "GridViewSideBarVisible": false,
+  "GridViewSideBarVisible": true,
   "FilterPanelVisible": false,
   "ShowSidebar": true,
   "SidebarPosition": 0,
@@ -429,7 +435,7 @@
   "ShowTopPanelViewSelectRandomGameButton": true,
   "ShowTopPanelSearchButton": true,
   "ShowTopPanelSearchBox": true,
-  "NameFilterSearchWithAcronyms": false,
+  "FuzzyMatchingInNameFilter": true,
   "TopPanelSectionSeparatorWidth": 15.0,
   "PluginTopPanelAlignment": 2,
   "SelectedFilterPreset": "00000000-0000-0000-0000-000000000000",
@@ -466,16 +472,17 @@
     "Format": "d",
     "PastWeekRelativeFormat": true
   },
+  "PlaytimeUseDaysFormat": false,
   "InstallSizeScanUseSizeOnDisk": true,
   "ScanLibInstallSizeOnLibUpdate": true,
   "CheckForProgramUpdates": 0,
   "CheckForAddonUpdates": 0,
   "CheckForLibraryUpdates": 1,
   "CheckForEmulatedLibraryUpdates": 1,
-  "LastProgramUpdateCheck": "2024-05-11T21:16:11.7918807-03:00",
-  "LastAddonUpdateCheck": "2024-05-11T21:16:12.5029643-03:00",
-  "LastLibraryUpdateCheck": "2024-05-11T21:16:05.6324847-03:00",
-  "LastEmuLibraryUpdateCheck": "2024-05-11T21:16:05.6334884-03:00",
+  "LastProgramUpdateCheck": "2024-05-11T21:45:10.037971-03:00",
+  "LastAddonUpdateCheck": "2024-05-11T21:45:10.9117974-03:00",
+  "LastLibraryUpdateCheck": "2024-05-11T21:45:04.1560214-03:00",
+  "LastEmuLibraryUpdateCheck": "2024-05-11T21:45:04.1570153-03:00",
   "LastAutoBackup": "0001-01-01T00:00:00",
   "PrimaryGameSearchItemAction": 1,
   "SecondaryGameSearchItemAction": 0,
@@ -501,6 +508,9 @@
   "WebImageSarchCoverTerm": "{Name} cover",
   "WebImageSarchBackgroundTerm": "{Name} wallpaper",
   "AccessibilityInterface": 0,
+  "PartialDescriptionLoading": true,
+  "WebImageSafeSearch": 0,
+  "LastSelectedGame": "00000000-0000-0000-0000-000000000000",
   "DevelExtenions": [],
   "SearchWindowVisibility": {
     "GameIcon": true,

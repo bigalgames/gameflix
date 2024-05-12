@@ -1,0 +1,60 @@
+{
+  "version": "1.5",
+  "default_core_path": "",
+  "default_core_name": "",
+  "label_display_mode": 0,
+  "right_thumbnail_mode": 0,
+  "left_thumbnail_mode": 0,
+  "thumbnail_match_mode": 0,
+  "sort_mode": 2,
+  "items": [
+    {
+      "path": "G:\\Git\\gameflix\\Roms\\Atari2600\\Super Game - CCE\\Catalogo_SuperGame_CCE\\C-819 - Star Wars - The Empire Strikes Back (1982) (Parker Bros) (PAL).bin",
+      "label": "",
+      "core_path": "G:\\Git\\gameflix\\RetroArch-Win64\\cores\\stella_libretro.dll",
+      "core_name": "Atari - 2600 (Stella)",
+      "crc32": "",
+      "db_name": ""
+    },
+    {
+      "path": "G:\\Git\\gameflix\\Roms\\Atari2600\\Super Game - CCE\\Catalogo_SuperGame_CCE\\C-823 - Demon Attack (Supergame).bin",
+      "label": "",
+      "core_path": "G:\\Git\\gameflix\\RetroArch-Win64\\cores\\stella_libretro.dll",
+      "core_name": "Atari - 2600 (Stella)",
+      "crc32": "",
+      "db_name": ""
+    },
+    {
+      "path": "G:\\Git\\gameflix\\Roms\\Atari2600\\Super Game - CCE\\Catalogo_SuperGame_CCE\\C-812 - Pac Man (1983) (CCE).bin",
+      "label": "",
+      "core_path": "G:\\Git\\gameflix\\RetroArch-Win64\\cores\\stella_libretro.dll",
+      "core_name": "Atari - 2600 (Stella)",
+      "crc32": "",
+      "db_name": ""
+    },
+    {
+      "path": "G:\\Git\\gameflix\\Roms\\Atari2600\\Activision\\Bloody Human Freeway (Human Freeway) (Freeway Beta) (1981) (Activision, David Crane) (AG-009) (Prototype).bin",
+      "label": "",
+      "core_path": "G:\\Git\\gameflix\\RetroArch-Win64\\cores\\stella_libretro.dll",
+      "core_name": "Atari - 2600 (Stella)",
+      "crc32": "",
+      "db_name": ""
+    },
+    {
+      "path": "G:\\Git\\gameflix\\Roms\\Atari2600\\2600\\Bobby Is Going Home (2600 Screen Search Console) (Jone Yuan Telephonic Enterprise Co).bin",
+      "label": "",
+      "core_path": "G:\\Git\\gameflix\\RetroArch-Win64\\cores\\stella_libretro.dll",
+      "core_name": "Atari - 2600 (Stella)",
+      "crc32": "",
+      "db_name": ""
+    },
+    {
+      "path": "G:\\Git\\gameflix\\Roms\\Atari2600\\Super Game - CCE\\Crackpots (1983) (CCE) (C-862) [a].bin",
+      "label": "",
+      "core_path": "G:\\Git\\gameflix\\RetroArch-Win64\\cores\\stella_libretro.dll",
+      "core_name": "Atari - 2600 (Stella)",
+      "crc32": "",
+      "db_name": ""
+    }
+  ]
+}
