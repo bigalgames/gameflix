@@ -13,3 +13,8 @@ Inclusão do RetroArch
 
 - Atari2600
 
+
+## atualizações
+
+- novo temas para tela.
+- novo metadados.

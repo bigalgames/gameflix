@@ -1,0 +1,131 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"                    
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    mc:Ignorable="d">
+
+    <Style TargetType="{x:Type GameDetails}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type GameDetails}">
+                    <Grid x:Name="PART_ViewHost"
+                          d:DesignWidth="{StaticResource DesignWidth}"
+                          d:DesignHeight="{StaticResource DesignHeight}"
+                          d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameIntance}"
+                          KeyboardNavigation.DirectionalNavigation="Contained"
+                          Style="{DynamicResource ApparitionFonduGamedetail}"
+                          KeyboardNavigation.TabNavigation="Contained">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="350" />
+                            <ColumnDefinition Width="6*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="3*" />
+                            <RowDefinition Height="4*" />
+                        </Grid.RowDefinitions>
+
+                        <!-- <MediaElement x:Name="Video" MediaElementBehaviors.Repeat="True" Source="{ThemeFile Video/Background.mp4}" Volume="0" SpeedRatio="0.5" Grid.Row="0" Grid.Column="0" Grid.RowSpan="10" Grid.ColumnSpan="10" Opacity="0.3">
+                            <MediaElement.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=IsActive}" Value="False">
+                                            <Setter Property="MediaElement.Source" Value="" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </MediaElement.Style>
+                        </MediaElement>-->
+                        
+
+                        <StackPanel x:Name="LeftPanel" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="{DynamicResource PS4BackgroundTransparent}" Margin="58.125,68,0.125,515.5" Width="488">
+                            <Image x:Name="Cover" Source="{Binding Game.CoverImage, Converter={StaticResource ImageStringToImageConverter}, IsAsync=True}" Margin="-356,16,0,0" Width="80" Height="80" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2" RenderOptions.BitmapScalingMode="Fant"/>
+                            <TextBlock x:Name="NomJeux"
+                                      Style="{DynamicResource TextBlockBaseStyle}"
+                                       Text="{Binding DisplayName}"
+                                       Foreground="White" FontFamily="{DynamicResource PS4Font}"
+                                       FontSize="21" Height="49" HorizontalAlignment="Left" Width="366" VerticalAlignment="Top" TextAlignment="Left" LineHeight="36" Padding="10,0,0,0" Margin="113,-76,0,0">
+
+
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="2" Color="Black"
+                                                      RenderingBias="Quality" Opacity="1"/>
+                                </TextBlock.Effect>
+
+
+                            </TextBlock>
+                            <TextBlock Style="{DynamicResource TextBlockBaseStyle}"  
+                                Text="{Binding Library}"
+                                Foreground="White" FontFamily="{DynamicResource PS4Font}"
+                                FontSize="20" Height="49" HorizontalAlignment="Left" Width="366" VerticalAlignment="Top" TextAlignment="Left" LineHeight="36" Padding="10,18,0,0" Margin="113,-51,0,0">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="2" Color="Black"
+                                        RenderingBias="Quality" Opacity="1"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                            <StackPanel x:Name="Boutons" Orientation="Horizontal" Margin="0" Grid.ColumnSpan="3" Grid.Row="2" Panel.ZIndex="1" >
+                                <Border x:Name="Play" BorderBrush="White" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Height="55" Width="348.666" Margin="25,7,0,0" Panel.ZIndex="1">
+                                    <ButtonEx x:Name="PART_ButtonContext"
+                                          Margin="0.125" BorderThickness="1" MinWidth="0" HorizontalContentAlignment="Center" Width="Auto" Height="Auto" Background="{x:Null}" HorizontalAlignment="Stretch"/>
+                                </Border>
+                                <Border x:Name="Option" BorderBrush="White" BorderThickness="1" RenderTransformOrigin="0.5,0.5" Width="77" Height="55" Margin="12,7,0,0" Panel.ZIndex="1">
+                                    <ButtonEx x:Name="PART_ButtonOptions"
+                                          Content="..."
+                                          Margin="0.25,0.125,0.125,0.25" BorderThickness="1" MinWidth="0" HorizontalContentAlignment="Center" Height="Auto" Width="Auto" Background="{x:Null}" HorizontalAlignment="Stretch" FontSize="36" VerticalAlignment="Stretch" />
+                                </Border>
+                            </StackPanel>
+                            <StackPanel x:Name="TimePlayed" Width="471.5" Margin="27.375,0,-10.875,3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Orientation="Horizontal">
+                                <Image Source="{ThemeFile Images/MenuIcon/Clock.png}" RenderOptions.BitmapScalingMode="Fant" Height="70" Width="70" Margin="10,0,0,0" />
+                                <TextBlock Style="{DynamicResource TextBlockBaseStyle}"
+                                               FontFamily="{DynamicResource PS4Font}"
+                                               Text="{DynamicResource LOCTimePlayed}"
+                                               Margin="10,-27,10,10" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="25" />
+                                <TextBlock Style="{DynamicResource TextBlockBaseStyle}"
+                                               Text="{Binding Playtime, Converter={StaticResource PlayTimeToStringConverter}}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="-140,35,0,0" FontSize="25" />
+                            </StackPanel>
+                            <Border BorderBrush="White" BorderThickness="1" Height="1" Margin="25,0" Width="438"/>
+                            <StackPanel x:Name="LastPlayed" Width="471.5" Margin="27.375,0,-10.875,3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Orientation="Horizontal">
+                                <Image Source="{ThemeFile Images/MenuIcon/Calendar.png}" RenderOptions.BitmapScalingMode="Fant" Height="70" Width="70" Margin="10,0,0,0" />
+                                <TextBlock Style="{DynamicResource TextBlockBaseStyle}"
+                                               FontFamily="{DynamicResource PS4Font}"
+                                               Text="{DynamicResource LOCGameLastActivityTitle}"
+                                               Margin="10,-27,10,10" HorizontalAlignment="Left" FontSize="25" VerticalAlignment="Center" />
+                                <TextBlock Style="{DynamicResource TextBlockBaseStyle}"
+                                               Text="{Binding LastActivity, Converter={StaticResource DateTimeToLastPlayedConverter}}" HorizontalAlignment="Left" Margin="-134,57.5,0,22.5" VerticalAlignment="Center" FontSize="25" Width="342.347" />
+                            </StackPanel>
+                            <Border BorderBrush="White" BorderThickness="1" Height="1" Margin="25,0" Width="438"/>
+                            <StackPanel x:Name="Note" Width="471.5" Margin="27.375,0,-10.875,3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="110" Orientation="Horizontal">
+                                <Image Source="{ThemeFile Images/MenuIcon/Like.png}" RenderOptions.BitmapScalingMode="Fant" Height="70" Width="70" Margin="10,0,0,0" />
+                                <TextBlock Style="{DynamicResource TextBlockBaseStyle}"
+                                    FontFamily="{DynamicResource PS4Font}"
+                                    Text="{DynamicResource LOCCommunityScore}"
+                                    Margin="10,-27,10,10" HorizontalAlignment="Left" FontSize="25" VerticalAlignment="Center" />
+                                <TextBlock Style="{DynamicResource TextBlockBaseStyle}"
+                                    Text="{Binding CommunityScore}" HorizontalAlignment="Left" Margin="-206,57.5,0,22.5" VerticalAlignment="Center" FontSize="25" Width="48.553" />
+                            </StackPanel>
+                        </StackPanel>
+
+                        <DockPanel Grid.Column="1" Grid.Row="0"
+                                   Margin="503.5,248,3,20"
+                                   HorizontalAlignment="Left" Grid.RowSpan="2" Grid.ColumnSpan="4" Width="1199">
+                            <Border BorderBrush="White" BorderThickness="0" RenderTransformOrigin="0.5,0.5" Width="1031" Height="Auto" Margin="0,-179,0,124.6">
+                                <StackPanel Background="{DynamicResource PS4BackgroundTransparent}" Width="Auto" Margin="0" Focusable="False" Height="Auto">
+
+                                    <ScrollViewerEx Margin="20,0,20,20" HorizontalAlignment="Stretch" Padding="0" Focusable="False" Panel.ZIndex="1" Width="Auto" Height="859.025" VerticalScrollBarVisibility="Auto" FontSize="31">
+                                        <HtmlTextView x:Name="PART_HtmlDescription"
+                                            HtmlFontSize="25"
+                                            HtmlFontFamily="{DynamicResource PS4Font}"
+                                            HtmlForeground="{DynamicResource TextColor}"
+                                            LinkForeground="{DynamicResource GlyphColor}"
+                                            FocusVisualStyle="{x:Null}" Height="817" Margin="0" Width="993" Background="{x:Null}" Focusable="False" Padding="0" ScrollViewer.CanContentScroll="True" UseLayoutRounding="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" />
+                                    </ScrollViewerEx>
+                                </StackPanel>
+                            </Border>
+                        </DockPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

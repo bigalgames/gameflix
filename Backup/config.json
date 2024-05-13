@@ -82,7 +82,7 @@
   },
   "ViewSettings": {
     "GroupingOrder": 0,
-    "GamesViewType": 2,
+    "GamesViewType": 1,
     "SelectedExplorerField": 2,
     "ListViewColumns": {
       "Icon": {
@@ -479,10 +479,10 @@
   "CheckForAddonUpdates": 0,
   "CheckForLibraryUpdates": 1,
   "CheckForEmulatedLibraryUpdates": 1,
-  "LastProgramUpdateCheck": "2024-05-11T21:45:10.037971-03:00",
-  "LastAddonUpdateCheck": "2024-05-11T21:45:10.9117974-03:00",
-  "LastLibraryUpdateCheck": "2024-05-11T21:45:04.1560214-03:00",
-  "LastEmuLibraryUpdateCheck": "2024-05-11T21:45:04.1570153-03:00",
+  "LastProgramUpdateCheck": "2024-05-12T11:17:22.7832558-03:00",
+  "LastAddonUpdateCheck": "2024-05-12T11:17:30.6081268-03:00",
+  "LastLibraryUpdateCheck": "2024-05-12T11:17:15.959953-03:00",
+  "LastEmuLibraryUpdateCheck": "2024-05-12T11:17:15.959953-03:00",
   "LastAutoBackup": "0001-01-01T00:00:00",
   "PrimaryGameSearchItemAction": 1,
   "SecondaryGameSearchItemAction": 0,
@@ -510,7 +510,7 @@
   "AccessibilityInterface": 0,
   "PartialDescriptionLoading": true,
   "WebImageSafeSearch": 0,
-  "LastSelectedGame": "00000000-0000-0000-0000-000000000000",
+  "LastSelectedGame": "bc7fe55b-5422-4d8d-a95e-5b90a2ec17d3",
   "DevelExtenions": [],
   "SearchWindowVisibility": {
     "GameIcon": true,

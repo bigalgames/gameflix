@@ -1,0 +1,10 @@
+Id: DolphinMetadata
+Name: GameTDB metadata provider
+Author: Maxine
+Version: 3.1
+Module: PlayniteDolphinMetadata.dll
+Type: MetadataProvider
+Icon: icon.png
+Links:
+  - Name: GitHub
+    Url: https://github.com/uwx/PlayniteDolphinMetadata

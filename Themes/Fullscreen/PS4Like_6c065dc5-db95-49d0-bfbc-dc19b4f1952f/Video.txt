@@ -1,0 +1,11 @@
+<MediaElement x:Name="Video" MediaElementBehaviors.Repeat="True" Source="{ThemeFile Video/Background.mp4}" Volume="0" SpeedRatio="0.5" Opacity="0.3">
+                            <MediaElement.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=IsActive}" Value="False">
+                                            <Setter Property="MediaElement.Source" Value="" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </MediaElement.Style>
+                        </MediaElement>
