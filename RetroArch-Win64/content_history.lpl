@@ -9,6 +9,46 @@
   "sort_mode": 2,
   "items": [
     {
+      "path": "G:\\Git\\gameflix\\Roms\\Famicom - NES\\D\\Duck Hunt (World).nes",
+      "label": "",
+      "core_path": "G:\\Git\\gameflix\\RetroArch-Win64\\cores\\fceumm_libretro.dll",
+      "core_name": "Nintendo - NES / Famicom (FCEUmm)",
+      "crc32": "",
+      "db_name": ""
+    },
+    {
+      "path": "G:\\Git\\gameflix\\Roms\\Famicom - NES\\E\\Earthbound (USA) (Proto).nes",
+      "label": "",
+      "core_path": "G:\\Git\\gameflix\\RetroArch-Win64\\cores\\fceumm_libretro.dll",
+      "core_name": "Nintendo - NES / Famicom (FCEUmm)",
+      "crc32": "",
+      "db_name": ""
+    },
+    {
+      "path": "G:\\Git\\gameflix\\Roms\\Atari2600\\AKA\\Im Schutz der Drachen (AKA Dragon Defender) (1983) (Quelle) (719.252 9) (PAL).bin",
+      "label": "",
+      "core_path": "G:\\Git\\gameflix\\RetroArch-Win64\\cores\\stella_libretro.dll",
+      "core_name": "Atari - 2600 (Stella)",
+      "crc32": "",
+      "db_name": ""
+    },
+    {
+      "path": "G:\\Git\\gameflix\\Roms\\Famicom - NES\\D\\Die Hard (USA).nes",
+      "label": "",
+      "core_path": "G:\\Git\\gameflix\\RetroArch-Win64\\cores\\fceumm_libretro.dll",
+      "core_name": "Nintendo - NES / Famicom (FCEUmm)",
+      "crc32": "",
+      "db_name": ""
+    },
+    {
+      "path": "G:\\Git\\gameflix\\Roms\\Famicom - NES\\B\\Balloon Fight (USA).nes",
+      "label": "",
+      "core_path": "G:\\Git\\gameflix\\RetroArch-Win64\\cores\\fceumm_libretro.dll",
+      "core_name": "Nintendo - NES / Famicom (FCEUmm)",
+      "crc32": "",
+      "db_name": ""
+    },
+    {
       "path": "G:\\Git\\gameflix\\Roms\\Atari2600\\Atari\\Asteroids (1981) (Atari, Brad Stewart - Sears) (CX2649 - 49-75163) ~.bin",
       "label": "",
       "core_path": "G:\\Git\\gameflix\\RetroArch-Win64\\cores\\stella_libretro.dll",
